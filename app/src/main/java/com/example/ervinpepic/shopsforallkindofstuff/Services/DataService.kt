@@ -12,25 +12,36 @@ object DataService {
     )
 
     val hats = listOf(
-            Product("Devslopes Graphic Beanie", "$21", "hat01"),
-            Product("Devslopes Hat Black", "$13", "hat02"),
-            Product("Devslopes Hat White", "$11", "hat03"),
-            Product("Devslopes Snapback", "$32", "hat04")
+            Product("Devslopes Graphic Beanie", "$21", "hat1"),
+            Product("Devslopes Hat Black", "$13", "hat2"),
+            Product("Devslopes Hat White", "$11", "hat3"),
+            Product("Devslopes Snapback", "$32", "hat4")
     )
 
     val hoodies = listOf(
-            Product("Devslopes Hoodie Gray", "$28", "hoodie01"),
-            Product("Devslopes Hoodie Red", "$34", "hoodie02"),
-            Product("Devslopes Gray Hoodie", "$21", "hoodie03"),
-            Product("Devslopes Black Hoodie", "$35", "hoodie04")
+            Product("Devslopes Hoodie Gray", "$28", "hoodie1"),
+            Product("Devslopes Hoodie Red", "$34", "hoodie2"),
+            Product("Devslopes Gray Hoodie", "$21", "hoodie3"),
+            Product("Devslopes Black Hoodie", "$35", "hoodie4")
     )
 
     val shirts = listOf(
-            Product("Devslopes Shirt Black", "$21", "shirt01"),
-            Product("Devslopes Shirt Light Gray", "$22", "shirt02"),
-            Product("Devslopes Shirt Red", "$21", "shirt03"),
-            Product("Devslopes Hustle", "$21", "shirt04"),
-            Product("Kickflip Studios", "$11", "shirt05")
+            Product("Devslopes Shirt Black", "$21", "shirt1"),
+            Product("Devslopes Shirt Light Gray", "$22", "shirt2"),
+            Product("Devslopes Shirt Red", "$21", "shirt3"),
+            Product("Devslopes Hustle", "$21", "shirt4"),
+            Product("Kickflip Studios", "$11", "shirt5")
 
     )
+
+    val digitalGood = listOf<Product>()
+
+    fun getProducts(category: String) : List<Product> {
+        return when (category) {
+            "SHIRTS" -> shirts
+            "HATS" -> hats
+            "HOODIES" -> hoodies
+            else -> digitalGood
+        }
+    }
 }
